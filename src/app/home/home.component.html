@@ -1,8 +1,23 @@
-<ng-template appAuthorization>
+<ng-template #complete>
+  <div> complete ?</div>
+</ng-template>
+
+<ng-template #complete2>
+  <div (click)="clear()"> complete2 ?</div>
+</ng-template>
+
+<div #toto>
+  hello totoooo!
+</div>
+
+
+
+
+<!-- <ng-template appAuthorization>
   <div>
     hello moto
   </div>
-</ng-template>
+</ng-template>!
 
 <div *ngFor="let book of books">
   {{book.title | json}}
@@ -12,4 +27,4 @@
   <div>
     hello toto
   </div>
-</ng-container>
+</ng-container> -->

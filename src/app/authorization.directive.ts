@@ -9,10 +9,6 @@ export class AuthorizationDirective implements OnDestroy {
 
   sub: Subscription;
   @Input() set appAuthorization(v) {
-    console.log('v', v);
-    console.log(this.viewContainerRef);
-    console.log(this.templateRef);
-
     this.sub = this.authorizationService._authorize
       .subscribe(e =>
         !e ? this.viewContainerRef.clear() : this.viewContainerRef.createEmbeddedView(this.templateRef));
@@ -25,7 +21,6 @@ export class AuthorizationDirective implements OnDestroy {
   ) { }
 
   ngOnDestroy() {
-    console.log(this.sub);
     if (this.sub) { this.sub.unsubscribe(); }
   }
 

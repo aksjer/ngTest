@@ -10,7 +10,7 @@ export class AuthorizationService {
 
   constructor() {
     // change authorization value every 10 seconds
-    setInterval(() => this.authorize = !this.authorize, 1000);
+    setInterval(() => this.authorize = !this.authorize, 10000);
   }
 
 }
