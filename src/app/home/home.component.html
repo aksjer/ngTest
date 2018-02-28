@@ -1,3 +1,5 @@
-<div *ngFor="let book of books">
-  {{book.title | json}}
-</div>
+<ng-container *appAuthorization>
+  <div *ngFor="let book of books">
+    {{book.title | json}}
+  </div>
+</ng-container>

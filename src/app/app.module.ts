@@ -9,11 +9,14 @@ import { HomeComponent } from './home/home.component';
 import { ROUTES } from './app.routes';
 import { BookResolverService } from './book-resolver.service';
 import { JwtInterceptorService } from './jwt-interceptor.service';
+import { AuthorizationDirective } from './authorization.directive';
+import { AuthorizationService } from './authorization.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AuthorizationDirective
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { JwtInterceptorService } from './jwt-interceptor.service';
     JwtInterceptorService,
     BookService,
     BookResolverService,
-    { provide: HTTP_INTERCEPTORS, useExisting: JwtInterceptorService, multi: true }
+    { provide: HTTP_INTERCEPTORS, useExisting: JwtInterceptorService, multi: true },
+    AuthorizationService
   ],
   bootstrap: [AppComponent]
 })
