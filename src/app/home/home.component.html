@@ -1,5 +1,15 @@
+<ng-template appAuthorization>
+  <div>
+    hello moto
+  </div>
+</ng-template>
+
+<div *ngFor="let book of books">
+  {{book.title | json}}
+</div>
+
 <ng-container *appAuthorization>
-  <div *ngFor="let book of books">
-    {{book.title | json}}
+  <div>
+    hello toto
   </div>
 </ng-container>
