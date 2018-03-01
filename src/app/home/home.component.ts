@@ -15,7 +15,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   books;
 
   constructor(
-    private _activatedRoute: ActivatedRoute
+    private _activatedRoute: ActivatedRoute,
+    // private vcr: ViewContainerRef
   ) { }
 
   ngOnInit() {
