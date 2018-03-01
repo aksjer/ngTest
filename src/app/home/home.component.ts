@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('toto', { read: ViewContainerRef }) vcr: ViewContainerRef;
+  // @ViewChild('toto', { read: ViewContainerRef }) vcr: ViewContainerRef;
   @ViewChild('complete') complete: TemplateRef<any>;
   @ViewChild('complete2') complete2: TemplateRef<any>;
 
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor(
     private _activatedRoute: ActivatedRoute,
-    // private vcr: ViewContainerRef
+    private vcr: ViewContainerRef
   ) { }
 
   ngOnInit() {
@@ -29,7 +29,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   clear() {
-    this.vcr.remove(0);
+    // this.vcr.remove(0);
+    this.vcr.clear();
   }
 
 }

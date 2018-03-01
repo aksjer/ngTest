@@ -11,12 +11,14 @@ import { BookResolverService } from './book-resolver.service';
 import { JwtInterceptorService } from './jwt-interceptor.service';
 import { AuthorizationDirective } from './authorization.directive';
 import { AuthorizationService } from './authorization.service';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AuthorizationDirective
+    AuthorizationDirective,
+    TestComponent
   ],
   imports: [
     BrowserModule,
