@@ -17,3 +17,15 @@ export class BookService {
   }
 
 }
+
+
+// interface A {
+//   a: string;
+// }
+// interface B {
+//   b: string;
+// }
+// type haha = A | B;
+// const ab: haha = { a: '15' };
+// const bb: haha = { b: '15' };
+// const cb: haha = { c: '15' }; // error
